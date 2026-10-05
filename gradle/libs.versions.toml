@@ -1,14 +1,33 @@
 [versions]
-agp = "9.1.0"
-android-compileSdk = "37"
-android-minSdk = "24"
+agp = "9.5.0"
+#agp = "8.3.2"
+android-compileSdk = "35"
+android-minSdk = "23"
 kotlin = "2.4.10"
-vanniktech-maven-publish = "0.36.0"
+#kotlin = "2.1.0"
+kmp = "9.3.0"
+vanniktech-maven-publish = "0.35.0"
+kotlinx-coroutines-play-services = "1.11.0"
+profiler = "1.0.0"
+kitepdf = "0.10.0"
+mlkit-android = "17.3.0"
+pdfium = "1.9.0"
+filekit = "0.16.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+app-profiler = { module = "com.iago:app-profiler", version.ref = "profiler" }
+kitepdf = { module = "io.github.yuroyami:kitepdf", version.ref = "kitepdf" }
+kitepdf-skia-renderer = { module = "io.github.yuroyami:kitepdf-skia-renderer", version.ref = "kitepdf" }
+kitepdf-native-renderer = { module = "io.github.yuroyami:kitepdf-native-renderer", version.ref = "kitepdf" }
+mlkit-android = { module = "com.google.mlkit:barcode-scanning", version.ref = "mlkit-android" }
+pdfium = { module = "com.iago:pdfium-android-fork", version.ref = "pdfium" }
+kotlinx-coroutines-play-services = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-play-services", version.ref = "kotlinx-coroutines-play-services" }
+filekit = { module = "io.github.vinceglb:filekit-core", version.ref = "filekit" }
 
 [plugins]
-android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
+android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "kmp" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 vanniktech-mavenPublish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktech-maven-publish" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+kotlinCocoapods = { id = "org.jetbrains.kotlin.native.cocoapods", version.ref = "kotlin" }
